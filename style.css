@@ -1,0 +1,135 @@
+/* ✅ Updated style.css for fixed layout */
+
+:root {
+    --background-color: #fefefe;
+    --editor-bg: #ffffff;
+    --iframe-bg: #ededed;
+    --text-color: #333;
+    --border-color: #ccc;
+    --label-bg: transparent;
+    --label-text: #333;
+    --button-bg: #0080FF;
+    --button-hover: #006ad4;
+  }
+  
+  body.dark {
+    --background-color: #1E1E2F;
+    --editor-bg: #2B2B3C;
+    --iframe-bg: #1c1c2a;
+    --text-color: #f0f0f0;
+    --border-color: #444;
+    --label-bg: transparent;
+    --label-text: #f0f0f0;
+    --button-bg: #6C63FF;
+    --button-hover: #554ef2;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Fira Code', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
+  #container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #iframe {
+    border: 1px solid var(--border-color);
+    background: var(--iframe-bg);
+    height: 50%;
+    width: 100%;
+  }
+  
+  #editors {
+    background-color: var(--editor-bg);
+    position: relative;
+    height: 50%;
+    width: 100%;
+  }
+  
+  .editor {
+    border: 1.5px solid var(--border-color);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 32%;
+    background-color: var(--editor-bg);
+  }
+  
+  #htmlEditor {
+    left: 2%;
+  }
+  #cssEditor {
+    left: 34%;
+  }
+  #jsEditor {
+    right: 2%;
+  }
+  
+  /* ============================= */
+  /* 🏷️ Top Labels Row */
+  /* ============================= */
+  #editorLabels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px;
+    background-color: var(--editor-bg);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    height: 40px;
+  }
+  
+  .labelBlock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--label-text);
+    min-width: 32%;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .labelButtons {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 6px;
+  }
+  
+  .button {
+    background-color: var(--button-bg);
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  #themeToggleContainer {
+    padding: 10px;
+    text-align: right;
+    background-color: var(--background-color);
+  }
