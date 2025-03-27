@@ -1,5 +1,7 @@
 // ✅ app.js (Minimize/Maximize + ACE Editor Theme Fix)
 
+//dark mode integrated
+
 function getCombinedUserCode() {
     const htmlCode = htmlEditor.getValue();
     const cssCode = cssEditor.getValue();
